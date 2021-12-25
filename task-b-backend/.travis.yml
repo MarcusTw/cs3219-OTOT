@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- 14
+services:
+- mongodb
+notifications:
+  email: false
+# deploy:
+#   provider: heroku
+#   app: random-asian-user-api
+#   api_key:
+#     secure: QlaIVZbFDhhhajHkD+fhuisU3tz5W7txD3lyor1mI5d51cyuZnruAmrU4awKH90S88o2lvWhRMsY96MR7ibrVrAM3VPfYDGZfWsUZ2ijKQXS5GKb9vbR1Pqd3FW92IY2dchCHH39AnRIBHkapBU14N4B4jTKpwXPxRO9+1lnRcuOspaWoQFwH2CeJk8Aq0nBLJjVWEifyHiOYpZX8tOymHUMMtT0nfpF+nwj9KwPlS25/1eYm5M37IQB52EsXeoPZ6JnWeE0Api6YG+G2b9PYJV7dywiq6+fx+r7svZeezd7Hv1hyoRHutODxIeVwZ/yXuc3yb//eScvTbvBkUsmTJOYdwl8aarg1I4p9+lm7QnawZ3pJym8hsluRcTbK2qaKAJYHAyYM5yCzyID812X3mH+8902AeKx3q8n/gioL4bpStnZe7z5E7VwQ4ZInBDiWppI6dg2PDAOkgth6IZf3ymaLo646LSrA/2BTqKr2E05TvklTnS58lA4km8nBjZUxwpXsdFnsAieZ1pDgeHeK1cWrqNNbvRjE9ggTSkyqClTweBOWR9UbaQ9Ya4K3CGDMe4WZ48brc6JWfBk6IiqQ3zZK7iJhPMPipjTQgunZOoOniypr2diuL3Gf6LGajkDc8tFbQSyybs6OD4MxAy5x7Cll++vEAhVWbtw+DHP7c4=
