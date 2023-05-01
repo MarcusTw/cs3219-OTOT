@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-service
+  namespace: cs3219
+  labels:
+    app: customer-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: customer-service
+  template:
+    metadata:
+      name: customer-service
+      namespace: cs3219
+      labels:
+        app: customer-service
+    spec:
+      containers:
+      - name: customer-service
+        image: cs3219/customer-service:1.0.0

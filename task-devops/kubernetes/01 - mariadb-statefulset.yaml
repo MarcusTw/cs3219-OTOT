@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cs3219
+  labels:
+    name: cs3219
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: cs3219-db
+  namespace: cs3219
+  labels:
+    app: cs3219-db
+spec:
+  serviceName: cs3219-db
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cs3219-db
+  template:
+    metadata:
+      name: cs3219-db
+      namespace: cs3219
+      labels:
+        app: cs3219-db
+    spec:
+      containers:
+      - name: cs3219-db
+        image: cs3219/mariadb:1.0.0
+        env:
+        - name: MYSQL_DATABASE
+          value: cs3219
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        ports:
+        - containerPort: 3306

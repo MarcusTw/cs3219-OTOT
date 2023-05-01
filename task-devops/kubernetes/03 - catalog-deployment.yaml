@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalog-service
+  namespace: cs3219
+  labels:
+    app: catalog-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: catalog-service
+  template:
+    metadata:
+      name: catalog-service
+      namespace: cs3219
+      labels:
+        app: catalog-service
+    spec:
+      containers:
+      - name: catalog-service
+        image: cs3219/catalog-service:1.0.0
